@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("bg.png");
+  background-color: #030723;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#root {
+  --color-white: #fff;
+  --color-black: #000;
+  --font-size-titles: 1.6rem;
+  --font-size-labels: 1rem;
+  --font-size-paraph: 1.1rem;
+  --font-weight-titles: 600;
+  --font-weight-labels: 500;
+  --border-radius-elements: 6px;
+  width: 100%;
+}
+
+.currency-converter {
+  margin: 0 auto;
+  padding: 40px 30px 50px;
+  border-radius: 8px;
+  max-width: 410px;
+  border: 1px solid rgb(255 255 255 /30%);
+  background-color: rgb(2 7 40 /50%);
+  backdrop-filter: blur(30px);
+}
+
+.currency-converter .converter-title {
+  color: var(--color-white);
+  font-size: var(--font-size-titles);
+  font-weight: var(--font-weight-titles);
+  text-align: center;
+}
+
+.currency-converter .converter-form {
+  margin-top: 45px;
+}
+
+.converter-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.converter-form .form-group .form-label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: var(--font-size-labels);
+  color: var(--color-white);
+  font-weight: var(--font-weight-labels);
+}
+
+.converter-form .form-group .form-input {
+  outline: none;
+  font-size: 1.1rem;
+  padding: 0 15px;
+  color: var(--color-white);
+  font-weight: var(--font-size-labels);
+  min-height: 48px;
+  border-radius: var(--border-radius-elements);
+  background-color: rgb(255 255 255 /10%);
+  border: 1px solid rgb(255 255 255 /50%);
+}
+
+.converter-form .form-currency-group {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.converter-form .form-currency-group .swap-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 25px;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: rgb(255 255 255 /10%);
+  border: 1px solid rgb(255 255 255 /50%);
+  transition: 0.2 ease;
+}
+
+.converter-form .form-currency-group .swap-icon:hover {
+  background-color: rgb(255 255 255 /30%);
+}
+
+.form-currency-group .currency-select {
+  display: flex;
+  padding: 0 10px;
+  min-height: 45px;
+  align-items: center;
+  border-radius: var(--border-radius-elements);
+  background-color: rgb(255 255 255 /10%);
+  border: 1px solid rgb(255 255 255 /50%);
+}
+
+.form-currency-group .currency-select img {
+  width: 25px;
+}
+
+.form-currency-group .currency-select .currency-dropdown {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0 10px 0 5px;
+  color: var(--color-white);
+  font-weight: var(--font-weight-labels);
+  font-size: var(--font-size-labels);
+}
+
+.form-currency-group .currency-select .currency-dropdown option {
+  color: var(--color-black);
+  font-weight: var(--font-weight-labels);
+}
+
+.converter-form .submit-btn {
+  width: 100%;
+  min-height: 52px;
+  border-radius: var(--border-radius-elements);
+  border: none;
+  outline: none;
+  font-size: var(--font-size-labels);
+  font-weight: var(--font-weight-titles);
+  cursor: pointer;
+  transition: 0.2 ease;
+}
+
+.converter-form .submit-btn:hover {
+  background-color: rgb(255 255 255 /80%);
+}
+
+.converter-form .exchange-rate-result {
+  color: var(--color-white);
+  font-size: var(--font-size-paraph);
+  font-weight: var(--font-weight-labels);
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 30px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  background-color: rgb(255 255 255 /15%);
+}
